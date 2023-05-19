@@ -1,7 +1,9 @@
 import { Container, Button, Form } from "react-bootstrap";
+import CardColor from "./CardColor";
 
 const AdministradorColor = () => {
   return (
+    <section>
       <Container className="my-5 p-0 contendor">
         <h2 className="display-6 fs-4 ps-3 pt-3">Administrador de colores</h2>
         <Form className="my-5">
@@ -16,6 +18,13 @@ const AdministradorColor = () => {
           </div>
         </Form>
       </Container>
+
+      <Container className="my-5 row justify-content-between">
+        <CardColor></CardColor>
+        <CardColor></CardColor>
+        <CardColor></CardColor>
+      </Container>
+    </section>
   );
 };
 
