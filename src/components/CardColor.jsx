@@ -2,7 +2,7 @@ import { Button, Card } from "react-bootstrap";
 
 const CardColor = () => {
   return (
-    <Card className="text-center col-md-4 my-1 w-auto">
+    <Card className="text-center col-md-4 my-1 w-auto contendor">
       <Card.Body>
         <Card.Title>Nombre del color</Card.Title>
         <div className="d-flex justify-content-center">
