@@ -1,11 +1,12 @@
 import { Container, Button, Form } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CardColor from "./CardColor";
 
 const AdministradorColor = () => {
   const listaColores = ['blue','red','brown','green','yellow','black','gray','violet']
+  let listaColotesLS = JSON.parse(localStorage.getItem('listaColoresLS')) || [];
   const [color, setColor] = useState('');
-  const [colores, setColores] = useState([]);
+  const [colores, setColores] = useState(listaColotesLS);
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -17,6 +18,9 @@ const AdministradorColor = () => {
       Lista de colores: blue,red,brown,green,yellow,black,gray,violet`);
     }
   }
+
+  useEffect(()=>{localStorage.setItem('listaColoresLS',JSON.stringify(colores))},[colores])
+
   return (
     <Container className="row justify-content-center justify-content-md-around">
       <Container className="my-5 p-0 contendor">
@@ -26,7 +30,9 @@ const AdministradorColor = () => {
             className="p-4 d-flex align-items-center bg-info"
             controlId="formBasicEmail"
           >
-            <div className="caja"></div>
+            <div className="caja">
+        
+            </div>
             <Form.Control
               type="text"
               placeholder="ingresa un color EJ: Blue"
