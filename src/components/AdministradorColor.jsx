@@ -3,13 +3,19 @@ import { useState } from "react";
 import CardColor from "./CardColor";
 
 const AdministradorColor = () => {
+  const listaColores = ['blue','red','brown','green','yellow','black','gray','violet']
   const [color, setColor] = useState('');
   const [colores, setColores] = useState([]);
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    setColores([...colores,color]);
-    setColor('');
+    if(listaColores.includes(color.toLowerCase())){
+      setColores([...colores,color]);
+      setColor('');
+    }else{
+      alert(`COLOR EQUIVOCADO. 
+      Lista de colores: blue,red,brown,green,yellow,black,gray,violet`);
+    }
   }
   return (
     <Container className="row justify-content-center justify-content-md-around">
