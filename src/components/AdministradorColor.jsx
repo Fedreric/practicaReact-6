@@ -12,7 +12,7 @@ const AdministradorColor = () => {
     setColor('');
   }
   return (
-    <Container className="row justify-content-center justify-content-md-between">
+    <Container className="row justify-content-center justify-content-md-around">
       <Container className="my-5 p-0 contendor">
         <h2 className="display-6 fs-4 ps-3 pt-3">Administrador de colores</h2>
         <Form className="my-5" onSubmit={handleSubmit}>
