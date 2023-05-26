@@ -23,6 +23,7 @@ git clone https://github.com/Fedreric/practicaReact-6.git
 >**EJECUTAR:** 
 - npm install
 - npm run dev 
+- https://practicoreact-6-fede39i.netlify.app/
 
 ## Autor 👨‍💻
  Federico Luciano Ledesma [GitHub](https://github.com/Fedreric)
